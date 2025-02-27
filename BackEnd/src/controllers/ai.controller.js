@@ -1,6 +1,7 @@
 const generateContent = require("../services/ai.service");
 
 module.exports.getReview = async (req, res) => {
+  console.log("Received request body:", req.body);
   try {
     const { code } = req.body;
 

@@ -23,10 +23,11 @@ function App() {
     try {
       const response = await axios.post(
         "https://ai-code-reviewer-snowy.vercel.app/ai/get-review",
-        {
-          code,
-        }
+        { code },
+        { headers: { "Content-Type": "application/json" } }
       );
+      console.log("response comming frm backend is > ", response);
+
       setReview(response.data);
     } catch (error) {
       console.error("Error fetching review:", error);
