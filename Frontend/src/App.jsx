@@ -22,7 +22,7 @@ function App() {
     setLoading(true);
     try {
       const response = await axios.post(
-        "https://ai-code-reviewer-gamma.vercel.app/ai/get-review",
+        "https://ai-code-reviewer-snowy.vercel.app/ai/get-review",
         {
           code,
         }
