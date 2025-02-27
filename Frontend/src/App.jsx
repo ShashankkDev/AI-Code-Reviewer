@@ -26,9 +26,9 @@ function App() {
         { code },
         { headers: { "Content-Type": "application/json" } }
       );
-      console.log("response comming frm backend is > ", response);
+      console.log("response comming frm backend is > ", response.data.review);
 
-      setReview(response.data);
+      setReview(response.data.review);
     } catch (error) {
       console.error("Error fetching review:", error);
       setReview("Give me a Code Please!!😊");
