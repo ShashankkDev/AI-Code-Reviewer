@@ -87,4 +87,4 @@ async function generateContent(prompt) {
   return result.response.text();
 }
 
-module.exports = { getReview: generateContent };
+module.exports = { generateContent };
