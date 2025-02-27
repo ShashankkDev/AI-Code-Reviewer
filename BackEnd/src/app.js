@@ -6,8 +6,9 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://code-expert-lac.vercel.app/",
+    origin: ["https://code-expert-lac.vercel.app/"],
     methods: "GET, POST",
+    allowedHeaders: ["Content-Type"],
     credentials: true,
   })
 );
