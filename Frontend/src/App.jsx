@@ -12,14 +12,14 @@ function App() {
   const [code, setCode] = useState("");
   const [codePresent, setCodePresent] = useState(false);
   const [review, setReview] = useState("");
-  const [loading, setLoading] = useState(false); // Loading state
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     prism.highlightAll();
   }, []);
 
   async function reviewCode() {
-    setLoading(true); // Show loading effect
+    setLoading(true);
     try {
       const response = await axios.post("http://localhost:3000/ai/get-review", {
         code,
@@ -29,7 +29,7 @@ function App() {
       console.error("Error fetching review:", error);
       setReview("Give me a Code Please!!😊");
     }
-    setLoading(false); // Hide loading effect
+    setLoading(false);
   }
 
   function clearCode() {
@@ -91,7 +91,6 @@ function App() {
           </div>
         </div>
 
-        {/* Right Section with Loading Animation */}
         <div className={`right ${review ? "has-review" : ""}`}>
           {review ? (
             ""

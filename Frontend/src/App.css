@@ -82,7 +82,7 @@ main .left .review:hover {
 main .right {
   position: relative;
   width: 50%;
-  background-image: url("../public/images/code-Reviewer.png");
+  background-image: url("/images/code-Reviewer.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
